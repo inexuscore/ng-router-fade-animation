@@ -1,0 +1,17 @@
+<div class="container">
+  <header class="my-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active">About</a>
+      </li>
+    </ul>
+  </header>
+
+  <main role="main" [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+</div>
